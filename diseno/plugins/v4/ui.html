@@ -1,0 +1,26 @@
+<style>body{font:13px/1.45 Inter,system-ui,sans-serif;margin:0;padding:12px;color:#161A1D;background:#F9F8F6}h1{font-size:14px;margin:0 0 8px}#log{white-space:pre-wrap;font:12px/1.5 'JetBrains Mono',monospace;background:#fff;border:1px solid #DDE0E4;border-radius:6px;padding:8px;height:380px;overflow:auto}.row{display:flex;gap:8px;margin-top:10px}button{height:36px;padding:0 16px;border:0;border-radius:6px;background:#106070;color:#fff;font-weight:600;cursor:pointer}button[disabled]{background:#B8BFC7;cursor:default}</style>
+<h1>Plataforma Digital de Optimización Logística · v4 · logo, colores y limpieza</h1>
+<div id="log"></div>
+<div class="row"><button id="dl" disabled>Descargar ZIP</button><button id="cl">Cerrar</button></div>
+<script>
+const files=[];let zipUrl=null;const logEl=document.getElementById('log');
+const log=t=>{logEl.textContent+=t+'\n';logEl.scrollTop=logEl.scrollHeight;};
+log('Ejecutando…');
+// CRC32 + ZIP sin compresión (no requiere internet)
+const CRC=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0;}return b=>{let c=0xFFFFFFFF;for(let i=0;i<b.length;i++)c=t[(c^b[i])&255]^(c>>>8);return (c^0xFFFFFFFF)>>>0;};})();
+function buildZip(list){const enc=new TextEncoder();const parts=[];const central=[];let offset=0;
+ for(const f of list){const name=enc.encode(f.name);const crc=CRC(f.bytes);const size=f.bytes.length;
+  const lh=new DataView(new ArrayBuffer(30));lh.setUint32(0,0x04034b50,true);lh.setUint16(4,20,true);lh.setUint16(6,0x0800,true);lh.setUint16(8,0,true);lh.setUint16(10,0,true);lh.setUint16(12,0x21,true);lh.setUint32(14,crc,true);lh.setUint32(18,size,true);lh.setUint32(22,size,true);lh.setUint16(26,name.length,true);lh.setUint16(28,0,true);
+  parts.push(new Uint8Array(lh.buffer),name,f.bytes);
+  const ch=new DataView(new ArrayBuffer(46));ch.setUint32(0,0x02014b50,true);ch.setUint16(4,20,true);ch.setUint16(6,20,true);ch.setUint16(8,0x0800,true);ch.setUint16(10,0,true);ch.setUint16(12,0,true);ch.setUint16(14,0x21,true);ch.setUint32(16,crc,true);ch.setUint32(20,size,true);ch.setUint32(24,size,true);ch.setUint16(28,name.length,true);ch.setUint16(30,0,true);ch.setUint16(32,0,true);ch.setUint16(34,0,true);ch.setUint16(36,0,true);ch.setUint32(38,0,true);ch.setUint32(42,offset,true);
+  central.push(new Uint8Array(ch.buffer),name);offset+=30+name.length+size;}
+ const cdSize=central.reduce((a,b)=>a+b.length,0);const end=new DataView(new ArrayBuffer(22));end.setUint32(0,0x06054b50,true);end.setUint16(8,list.length,true);end.setUint16(10,list.length,true);end.setUint32(12,cdSize,true);end.setUint32(16,offset,true);
+ return new Blob([...parts,...central,new Uint8Array(end.buffer)],{type:'application/zip'});}
+function download(){if(!zipUrl)return;const a=document.createElement('a');a.href=zipUrl;a.download='pdol-capturas.zip';document.body.appendChild(a);a.click();a.remove();}
+onmessage=e=>{const m=e.data.pluginMessage;if(!m)return;
+ if(m.type==='log')log(m.text);
+ if(m.type==='file'){files.push({name:m.name,bytes:new Uint8Array(m.bytes)});}
+ if(m.type==='done'){if(files.length){const blob=buildZip(files);zipUrl=URL.createObjectURL(blob);log('ZIP listo: '+files.length+' imágenes, '+(blob.size/1048576).toFixed(1)+' MB. Se descarga solo; si no, usa el botón.');document.getElementById('dl').disabled=false;download();}}};
+document.getElementById('dl').onclick=download;
+document.getElementById('cl').onclick=()=>parent.postMessage({pluginMessage:'close'},'*');
+</script>

@@ -1,0 +1,64 @@
+/* Tokens de la Plataforma Digital de Optimización Logística.
+   Generados desde las variables de Figma (14 nov 2026). */
+:root {
+  --color-primary-50: #ecfbfd;
+  --color-primary-100: #d5f6fb;
+  --color-primary-200: #a2ecf6;
+  --color-primary-300: #4fdbee;
+  --color-primary-400: #15bfd5;
+  --color-primary-500: #1196a7;
+  --color-primary-600: #0d7482;
+  --color-primary-700: #09535d;
+  --color-primary-800: #063a41;
+  --color-primary-900: #04252a;
+  --color-secondary-100: #fff0d6;
+  --color-secondary-300: #ffcb70;
+  --color-secondary-500: #ffab1a;
+  --color-secondary-700: #915108;
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f0f1f4;
+  --color-neutral-200: #e1e4ea;
+  --color-neutral-300: #c4c9d4;
+  --color-neutral-400: #8a93a8;
+  --color-neutral-500: #636e88;
+  --color-neutral-600: #4d566a;
+  --color-neutral-700: #333947;
+  --color-neutral-900: #15181e;
+  --color-base-papel: #f7f8fa;
+  --color-base-blanco: #ffffff;
+  --color-semantic-exito: #15803d;
+  --color-semantic-error: #dc2626;
+  --color-semantic-aviso: #ffab1a;
+  --color-semantic-info: #15bfd5;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --radius-input: 6px;
+  --radius-card: 10px;
+  --font-sans: 'Archivo', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+.t-display-61 { font-family: var(--font-sans); font-weight: 800; font-size: 61px; line-height: 1.02; }
+.t-display-49 { font-family: var(--font-sans); font-weight: 800; font-size: 49px; line-height: 1.05; }
+.t-display-39 { font-family: var(--font-sans); font-weight: 800; font-size: 39px; line-height: 1.1; }
+.t-titulo-31 { font-family: var(--font-sans); font-weight: 700; font-size: 31px; line-height: 1.15; }
+.t-titulo-25 { font-family: var(--font-sans); font-weight: 700; font-size: 25px; line-height: 1.2; }
+.t-titulo-20 { font-family: var(--font-sans); font-weight: 600; font-size: 20px; line-height: 1.3; }
+.t-texto-20 { font-family: var(--font-sans); font-weight: 400; font-size: 20px; line-height: 1.45; }
+.t-texto-16 { font-family: var(--font-sans); font-weight: 400; font-size: 16px; line-height: 1.5; }
+.t-texto-16-medium { font-family: var(--font-sans); font-weight: 500; font-size: 16px; line-height: 1.5; }
+.t-texto-16-semibold { font-family: var(--font-sans); font-weight: 600; font-size: 16px; line-height: 1.5; }
+.t-texto-14 { font-family: var(--font-sans); font-weight: 400; font-size: 14px; line-height: 1.5; }
+.t-texto-14-semibold { font-family: var(--font-sans); font-weight: 600; font-size: 14px; line-height: 1.5; }
+.t-texto-12 { font-family: var(--font-sans); font-weight: 400; font-size: 12px; line-height: 1.5; }
+.t-dato-25 { font-family: var(--font-mono); font-weight: 700; font-size: 25px; line-height: 1.2; }
+.t-dato-20 { font-family: var(--font-mono); font-weight: 700; font-size: 20px; line-height: 1.2; }
+.t-dato-14 { font-family: var(--font-mono); font-weight: 500; font-size: 14px; line-height: 1.4; }
+.t-dato-12-bold { font-family: var(--font-mono); font-weight: 700; font-size: 12px; line-height: 1.4; }
+.t-dato-12 { font-family: var(--font-mono); font-weight: 400; font-size: 12px; line-height: 1.4; }

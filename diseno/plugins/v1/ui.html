@@ -1,0 +1,5 @@
+<style>body{font:13px/1.45 Inter,system-ui,sans-serif;margin:0;padding:12px;color:#161A1D;background:#F9F8F6}h1{font-size:14px;margin:0 0 8px}#log{white-space:pre-wrap;font:12px/1.5 'JetBrains Mono',monospace;background:#fff;border:1px solid #DDE0E4;border-radius:6px;padding:8px;height:420px;overflow:auto}button{margin-top:10px;height:36px;padding:0 16px;border:0;border-radius:6px;background:#106070;color:#fff;font-weight:600;cursor:pointer}</style>
+<h1>Plataforma Digital de Optimización Logística · completar diseño</h1>
+<div id="log">Ejecutando…\n</div>
+<button onclick="parent.postMessage({pluginMessage:'close'},'*')">Cerrar</button>
+<script>onmessage=e=>{const m=e.data.pluginMessage;if(m&&m.type==='log'){const l=document.getElementById('log');l.textContent+=m.text+'\n';l.scrollTop=l.scrollHeight;}}</script>

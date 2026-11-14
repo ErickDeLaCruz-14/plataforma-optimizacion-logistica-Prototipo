@@ -1,0 +1,17 @@
+PDOL · v4 (logo, colores, sin flechas)
+
+ 1. Logo nuevo (componente "Logo", variantes Claro y Oscuro): tres cargas de distinto tamaño
+    encajadas sin espacio libre —la consolidación— sobre una ruta con dos paradas.
+    Reemplaza la marca anterior en todas las pantallas.
+ 2. Paleta modernizada: petróleo más vivo, ámbar más cálido, neutros grises azulados y fondo
+    blanco frío #F7F8FA en lugar del papel cálido. Todo par de texto importante pasa WCAG AA.
+ 3. Las tramas de las barras, el mapa, el ticket y las líneas quedan enlazadas a la paleta.
+ 4. Guía de estilos con los códigos hex nuevos y la nota de contraste corregida.
+ 5. Quita todas las flechas "→": los trayectos quedan "Herrera – Villa Mella" y "PUERTA →" pasa a "PUERTA".
+ 6. El encabezado "RECOGIDA" de la tabla ya cabe completo.
+ 7. El grupo "Card camión" de la página Componentes se ve completo.
+ Al final exporta de nuevo pdol-capturas.zip para revisar.
+
+Cómo correrlo: Menú > Plugins > Development > Import plugin from manifest... con el manifest.json
+de ESTA carpeta, y luego "PDOL · v4 (logo, colores, sin flechas)".
+Antes de correrlo guarda una versión (File > Save to version history) por si quieres volver a los colores anteriores.

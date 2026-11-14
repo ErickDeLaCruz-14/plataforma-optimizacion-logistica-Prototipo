@@ -1,0 +1,10 @@
+{
+  "name": "PDOL · v4 (logo, colores, sin flechas)",
+  "id": "pdol-v4",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": { "allowedDomains": ["none"] }
+}

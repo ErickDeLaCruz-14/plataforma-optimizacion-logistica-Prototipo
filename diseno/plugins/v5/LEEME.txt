@@ -1,0 +1,28 @@
+PDOL · v5 (perfil y seguridad)
+
+Qué agrega
+ 1. Componentes: Subnav item, Interruptor (activado, desactivado, bloqueado), Código de
+    verificación (vacío, completo, error), Botón · Peligro y 20 íconos nuevos.
+ 2. Empresa (fila nueva en Pantallas):
+    10  Datos de la cuenta
+    10b Seguridad: contraseña con requisitos, verificación en dos pasos, sesiones abiertas,
+        actividad reciente
+    10c Verificación en dos pasos (desactivada): método app o correo
+    10d Activar: QR, clave manual y código de 6 dígitos
+    10e Códigos de respaldo
+    10f Pedidos completados: resumen, filtros, tabla con recibo, paginación
+    10g Notificaciones (por correo; el recordatorio de recogida es obligatorio)
+    10h Equipo y permisos: usuarios y roles
+    10i Privacidad y datos: copia de datos (Ley 172-13), consentimientos, eliminar cuenta
+ 3. Transportista: las mismas pantallas (14 a 14i) sin Equipo, con Rutas completadas.
+ 4. 03b: código de verificación después de iniciar sesión.
+ 5. Overlays: Cerrar las demás sesiones y Eliminar cuenta.
+ 6. Prototipo: subnavegación, flujo de activación (10c, 10d, 10e, 10b), overlays,
+    inicio de sesión (03, 03b, 05) y todos los enlaces a "Perfil" van a la pantalla nueva.
+    Las pantallas 10 y 14 viejas quedan renombradas "(versión anterior)"; puedes borrarlas.
+
+Cómo correrlo
+ Figma de escritorio › Plugins › Development › Import plugin from manifest… › manifest.json
+ de esta carpeta. Ábrelo en el archivo "Plataforma Digital de Optimización Logística — UI".
+ Al terminar, descarga pdol-capturas.zip y déjalo en C:\Users\Erick\Downloads\pdol-capturas.
+ Si algo sale mal: Ctrl+Z o Historial de versiones.

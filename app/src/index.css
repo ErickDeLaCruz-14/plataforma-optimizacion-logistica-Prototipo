@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Tokens del diseño (variables de Figma) como tema de Tailwind.
+   Fuente: diseno/tokens/tokens.json. Generan clases como bg-primary-600, text-neutral-500, rounded-card. */
+@theme {
+  --font-sans: "Archivo", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+
+  --color-primary-50: #ecfbfd;
+  --color-primary-100: #d5f6fb;
+  --color-primary-200: #a2ecf6;
+  --color-primary-300: #4fdbee;
+  --color-primary-400: #15bfd5;
+  --color-primary-500: #1196a7;
+  --color-primary-600: #0d7482;
+  --color-primary-700: #09535d;
+  --color-primary-800: #063a41;
+  --color-primary-900: #04252a;
+
+  --color-secondary-100: #fff0d6;
+  --color-secondary-300: #ffcb70;
+  --color-secondary-500: #ffab1a;
+  --color-secondary-700: #915108;
+
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f0f1f4;
+  --color-neutral-200: #e1e4ea;
+  --color-neutral-300: #c4c9d4;
+  --color-neutral-400: #8a93a8;
+  --color-neutral-500: #636e88;
+  --color-neutral-600: #4d566a;
+  --color-neutral-700: #333947;
+  --color-neutral-900: #15181e;
+
+  --color-papel: #f7f8fa;
+
+  --color-exito: #15803d;
+  --color-error: #dc2626;
+  --color-aviso: #ffab1a;
+  --color-info: #15bfd5;
+
+  --radius-input: 6px;
+  --radius-card: 10px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply bg-papel text-neutral-900 antialiased;
+  }
+  body {
+    @apply font-sans;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Display: Archivo ExtraBold en ancho expandido, como en Figma. */
+  .display {
+    font-weight: 800;
+    font-stretch: 112%;
+    letter-spacing: -0.01em;
+  }
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.16em];
+  }
+}

@@ -1,0 +1,27 @@
+PLATAFORMA DIGITAL DE OPTIMIZACIÓN LOGÍSTICA · plugin para completar el diseño
+
+Qué hace (una sola vez, sobre el archivo "Plataforma Digital de Optimización Logística — UI"):
+ 1. Ajusta columnas de la tabla para que quepa a 1280 px.
+ 2. Crea el Hero animado (34 % -> 62 % -> 91 %) con After delay + Smart animate.
+ 3. Crea la Demo interactiva Envío individual / Consolidado (switch con Smart animate).
+ 4. Pone el ícono Lucide correcto en cada ítem del sidebar.
+ 5. Landing: hero animado, demo nueva, tipografía expandida que parte línea a 1280 px.
+ 6. Reemplaza todas las barras de capacidad por segmentos con tooltip al pasar el cursor.
+ 7. Mis pedidos: tabla como instancia, drawer y menú ⋮ como overlays del prototipo.
+ 8. Pantalla de carga del motor (skeletons) que pasa sola a "Evaluando rutas" en 1.8 s.
+ 9. Línea de km, mapas, recibo y cards de camión como instancias.
+10. Grid de 12 columnas en todas las pantallas.
+11. Anotaciones para desarrollo (movimiento, toasts, validación).
+12. Reconecta el prototipo y agrega hover a botones, menú, tabs y cards.
+13. Ajustes puntuales de ancho para 1280 px.
+14. Prueba cada pantalla a 1280 y 1440 px y reporta lo que aún desborde.
+
+Cómo correrlo (Figma de escritorio en Windows; los plugins de desarrollo no corren en el navegador):
+ 1. Descomprime esta carpeta en tu PC.
+ 2. Abre el archivo de Figma.
+ 3. Menú > Plugins > Development > Import plugin from manifest... y elige manifest.json.
+ 4. Menú > Plugins > Development > PDOL · Completar diseño.
+ 5. Espera el "Listo." en la ventana y copia el registro si algo sale con ✖.
+
+Si algo no te convence: Ctrl+Z o File > Show version history y restaura la versión anterior.
+No usa internet ni las llamadas del MCP de Figma.

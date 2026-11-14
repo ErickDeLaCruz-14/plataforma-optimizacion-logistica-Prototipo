@@ -1,0 +1,15 @@
+PDOL · Revisión v2 (arreglos + exportar)
+
+Qué hace:
+ 1. Hace que la línea separadora de la landing ocupe el ancho disponible (era el único desborde a 1280 px).
+ 2. Diagnóstico: muestra los retrasos guardados en las animaciones y cuántas instancias hay.
+ 3. Exporta en PNG la guía, cada grupo de componentes y todas las pantallas (sin las propuestas descartadas)
+    y las junta en pdol-capturas.zip.
+
+Cómo correrlo (Figma de escritorio):
+ 1. Descomprime esta carpeta.
+ 2. Abre el archivo "Plataforma Digital de Optimización Logística — UI".
+ 3. Menú > Plugins > Development > Import plugin from manifest... > elige manifest.json de ESTA carpeta.
+ 4. Menú > Plugins > Development > PDOL · Revisión v2.
+ 5. Al terminar se descarga pdol-capturas.zip (si no, usa el botón "Descargar ZIP").
+ 6. Sube ese ZIP al chat junto con el texto del registro.

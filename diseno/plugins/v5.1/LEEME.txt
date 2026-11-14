@@ -1,0 +1,4 @@
+PDOL · v5.1
+Corrige fondos verdes/rojos que salieron sólidos, fondos de overlays opacos, agrega textos de ayuda en RNC, correo y confirmar contraseña, y da aire a las tarjetas de lista.
+Importar: Figma de escritorio › Plugins › Development › Import plugin from manifest… › manifest.json.
+Al terminar, deja pdol-capturas.zip en C:\Users\Erick\Downloads\pdol-capturas.

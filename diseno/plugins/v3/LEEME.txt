@@ -1,0 +1,14 @@
+PDOL · Revisión v3 (correcciones + exportar)
+
+Corrige lo detectado en las capturas:
+ 1. Íconos del menú lateral oscuros o invisibles en las pantallas.
+ 2. Filas de ~100 px de alto (espaciador vacío) en Panel de empresa, Mis pedidos y Panel de transportista.
+ 3. Cards de camión aplastadas en Mis camiones.
+ 4. "Haina → ZF Las Américas" montado sobre la columna Carga.
+ 5. Segmentos angostos sin etiqueta: ahora muestran la etiqueta corta (TÚ, B, C, D, LIBRE).
+ 6. "LIBRE 3800" → "LIBRE 3,800" en la demo.
+ 7. Texto cortado en Recuperar contraseña (y cualquier otro texto que se saliera de su tarjeta).
+Luego vuelve a exportar las pantallas a pdol-capturas.zip para revisar.
+
+Cómo correrlo: igual que la v2, pero eligiendo el manifest.json de ESTA carpeta
+(Menú > Plugins > Development > Import plugin from manifest...) y luego "PDOL · Revisión v3".

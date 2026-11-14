@@ -1,0 +1,10 @@
+{
+  "name": "PDOL · Revisión v2 (arreglos + exportar)",
+  "id": "pdol-revision-v2",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": { "allowedDomains": ["none"] }
+}
