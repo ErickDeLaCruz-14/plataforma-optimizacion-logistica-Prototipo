@@ -17,7 +17,7 @@ Copia mejorada del prototipo (23 nov 2026). **Es una propuesta:** los colores pu
 | Fondo del contenido | `Base/Papel` | `Base/Fondo` #F2F2F2, con tarjetas en blanco |
 | Logo | Camión sobre ámbar | "Ruta consolidada": tres orígenes que se unen en una línea, sobre rojo, con punto ámbar |
 | Roles | Empresa y transportista | Cinco roles (abajo) |
-| Pantallas | 57 + overlays | 79 + overlays, incluidas las de admin, conductor, cliente admin y errores |
+| Pantallas | 57 + overlays | 89 + overlays, incluidas las de admin, conductor, cliente admin y errores |
 | Nombres | "Empresa" | "Cliente" para quien envía la carga |
 
 Tipografía, espaciado, radios y la escala Primary, Neutral y Semantic no cambian. Tokens completos en [`tokens/`](tokens/), guía visual en [`guia-de-estilos/`](guia-de-estilos/).
@@ -43,7 +43,7 @@ Tipografía, espaciado, radios y la escala Primary, Neutral y Semantic no cambia
 
 ## Inventario de pantallas
 
-89 capturas a 1440 px de ancho. No se incluyen las exploraciones, los 15 toasts ni las pantallas marcadas como "Repetidas" en Figma.
+99 capturas a 1440 px de ancho. No se incluyen las exploraciones, los 15 toasts ni las pantallas marcadas como "Repetidas" en Figma.
 
 ### Públicas (8)
 
@@ -105,10 +105,20 @@ Tipografía, espaciado, radios y la escala Primary, Neutral y Semantic no cambia
 | 09c · Cliente (sucursal) · Detalle · Recibo · PED-0139 | [ver](capturas/09c-cliente-sucursal-detalle-recibo-ped-0139.png) |
 | 09c · Cliente (sucursal) · Detalle · Recibo · PED-0148 | [ver](capturas/09c-cliente-sucursal-detalle-recibo-ped-0148.png) |
 
-### Cliente · administrador de empresa (13)
+### Cliente · administrador de empresa (23)
 
 | Pantalla | Captura |
 |---|---|
+| 06 · Cliente (admin) · Nuevo pedido | [ver](capturas/06-cliente-admin-nuevo-pedido.png) |
+| 07a0 · Cliente (admin) · Evaluando rutas · cargando | [ver](capturas/07a0-cliente-admin-evaluando-rutas-cargando.png) |
+| 07a · Cliente (admin) · Evaluando rutas | [ver](capturas/07a-cliente-admin-evaluando-rutas.png) |
+| 07b · Cliente (admin) · Pedido asignado | [ver](capturas/07b-cliente-admin-pedido-asignado.png) |
+| 09a · Cliente (admin) · Detalle · Resumen | [ver](capturas/09a-cliente-admin-detalle-resumen.png) |
+| 09b · Cliente (admin) · Detalle · Plan de ruta | [ver](capturas/09b-cliente-admin-detalle-plan-de-ruta.png) |
+| 09c · Cliente (admin) · Detalle · Recibo | [ver](capturas/09c-cliente-admin-detalle-recibo.png) |
+| 09a · Cliente (admin) · Detalle · Resumen · PED-0148 | [ver](capturas/09a-cliente-admin-detalle-resumen-ped-0148.png) |
+| 09b · Cliente (admin) · Detalle · Plan de ruta · PED-0148 | [ver](capturas/09b-cliente-admin-detalle-plan-de-ruta-ped-0148.png) |
+| 09c · Cliente (admin) · Detalle · Recibo · PED-0148 | [ver](capturas/09c-cliente-admin-detalle-recibo-ped-0148.png) |
 | 10 · Cliente (admin) · Perfil | [ver](capturas/10-cliente-admin-perfil.png) |
 | 10b · Cliente (admin) · Perfil · Seguridad | [ver](capturas/10b-cliente-admin-perfil-seguridad.png) |
 | 10c · Cliente (admin) · Perfil · Verificación en dos pasos (desactivada) | [ver](capturas/10c-cliente-admin-perfil-verificacion-en-dos-pasos-desactivada.png) |
@@ -192,6 +202,7 @@ En modo Presentación, el menú de flujos ofrece estos puntos de inicio (actuali
 |---|---|
 | Inicio · Landing | 01 Landing |
 | A · Cliente crea un pedido | 06 Nuevo pedido (sucursal) |
+| K · Cliente administrador crea un pedido | 06 Nuevo pedido (cliente admin) |
 | B · Transportista registra un camión | 12 Flota |
 | C · Activar verificación en dos pasos | 10c Verificación (cliente admin) |
 | D · Seguridad de la cuenta | 10b Seguridad (cliente admin) |
@@ -202,4 +213,21 @@ En modo Presentación, el menú de flujos ofrece estos puntos de inicio (actuali
 | I · Transportista administra su empresa | 11 Panel del transportista |
 | J · Administrador de la plataforma | A1 Panel de administración |
 
-El menú lateral de cada rol lleva a las pantallas de ese mismo rol, y el logo lleva a su panel. Se revisó el grafo del prototipo: ningún destino roto y todas las pantallas se alcanzan desde algún flujo, salvo las de error (E0–E5), que son estados sueltos sin un camino natural desde la navegación.
+## Revisión de botones, roles y flujos (23 nov 2026)
+
+Se revisaron por script los 904 enlaces del prototipo. Resultado: ningún destino roto, ningún enlace que pase de un rol a otro, todas las pantallas con rol tienen "Cerrar sesión", ningún ítem del menú sin acción y cada flujo se queda dentro de su rol (los que empiezan en la landing o en el correo llegan a los paneles a través del inicio de sesión, como corresponde).
+
+Corregido:
+- **Menús laterales:** 262 enlaces apuntaban a la pantalla equivocada (por ejemplo, todo el menú del administrador llevaba al panel del transportista). Ahora cada menú se queda dentro de su rol y el logo lleva al panel del rol.
+- **Cliente administrador:** su "Nuevo pedido" y los recibos de "Pedidos completados" abrían pantallas de la sucursal. Se agregaron 10 pantallas propias (06, 07a0, 07a, 07b y el detalle de PED-0142 y PED-0148) con el mismo diseño y su menú lateral; solo cambia el menú.
+- **Menú ⋮ de cada pedido:** las tres opciones iban a un solo recibo, y en cuatro pedidos era el de otro pedido (PED-0142). Ahora "Ver detalle", "Ver plan de ruta" y "Ver recibo" abren la pantalla de ese pedido.
+- **Navegación sin acción:** se conectaron los botones del conductor (continuar ruta, confirmar entrega, reportar incidencia y volver), los accesos del panel del administrador y del cliente administrador, las migas de pan del conductor y los botones de las páginas de error (ir al inicio, volver, iniciar sesión, reintentar).
+
+Pendiente de decidir con el equipo (no se tocó):
+- Botones con resultado: Aprobar cuenta / Rechazar, Marcar resuelta, Reasignar pedidos, Invitar usuario o conductor, Agregar sucursal, Exportar o Descargar (CSV/PDF), Guardar cambios en A7, C2 y 10u, Reenviar código.
+- Enlaces "Ver" y "Editar" de filas sin pantalla de destino (detalle de usuario, de ruta del administrador, de sucursal, rutas pasadas del conductor).
+- "Verificar y activar" (10d y 14d): la pantalla de códigos de respaldo que seguía ya no está en la v2.
+- Submenú del perfil de sucursal (10u): Seguridad, Verificación en dos pasos y Notificaciones no tienen pantallas de sucursal.
+- "Ir a mi panel" (403) y "Ver estado del servicio" (E5): dependen del rol o de una página que no existe.
+- Páginas de error (E0–E5): no tienen un flujo propio.
+
