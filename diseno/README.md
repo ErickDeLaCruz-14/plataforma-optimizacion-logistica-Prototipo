@@ -6,6 +6,8 @@ Respaldo del diseño de interfaz de la **Plataforma Digital de Optimización Log
 - **Prototipo navegable:** https://www.figma.com/proto/jgyMWiNMdltQbrvLgArYma?node-id=12-57&starting-point-node-id=12%3A57
 - **Copia local:** [`figma/plataforma-optimizacion-logistica-ui.fig`](figma/) (se abre con *Import* en Figma).
 
+> Hay una propuesta más reciente en [`v2-propuesta/`](v2-propuesta/), con nueva paleta y cinco roles. Esta carpeta sigue siendo la versión vigente hasta decidir los colores.
+
 ## Contenido
 
 | Carpeta | Qué tiene |
@@ -15,6 +17,7 @@ Respaldo del diseño de interfaz de la **Plataforma Digital de Optimización Log
 | [`guia-de-estilos/`](guia-de-estilos/) | Captura de la página *Guía de estilos*, el logo en SVG y el resumen de color, tipografía y medidas. |
 | [`figma/`](figma/) | Copia `.fig` del archivo. |
 | [`plugins/`](plugins/) | Plugins de Figma (v1 a v5.1) con los que se construyó y corrigió el prototipo. Cada carpeta trae su `LEEME.txt`. |
+| [`v2-propuesta/`](v2-propuesta/) | Propuesta v2 del diseño (23 nov 2026). |
 | [`principios-ui.md`](principios-ui.md) | Principios de usabilidad aplicados (Krug, Tilley), reglas de color y contraste, y registro de mejoras. |
 
 ## Flujos del prototipo

@@ -11,6 +11,7 @@ Este repositorio guarda el prototipo de interfaz y la base del front-end.
 | Carpeta | Qué tiene |
 |---|---|
 | [`diseno/`](diseno/) | Prototipo en Figma: capturas de las 57 pantallas y overlays, tokens de diseño, guía de estilos, archivo `.fig`, plugins y principios de UI aplicados. |
+| [`diseno/v2-propuesta/`](diseno/v2-propuesta/) | Propuesta v2 del diseño: marca en rojo, cinco roles (cliente de sucursal, cliente administrador, conductor, transportista administrador y administrador de la plataforma) y pantallas de error. Los colores aún pueden cambiar. |
 | [`app/`](app/) | Front-end en React + Vite + Tailwind con los tokens del diseño. Por ahora: landing, inicio de sesión y panel de empresa. |
 
 ## Enlaces
