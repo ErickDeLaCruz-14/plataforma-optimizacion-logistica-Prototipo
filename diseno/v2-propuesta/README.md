@@ -186,4 +186,20 @@ Tipografía, espaciado, radios y la escala Primary, Neutral y Semantic no cambia
 
 ## Flujos del prototipo
 
-A · Empresa crea un pedido · B · Transportista registra un camión · Inicio · Landing · C · Activar verificación en dos pasos · D · Seguridad de la cuenta · E · Correo de notificación · F · Mis pedidos sin pedidos.
+En modo Presentación, el menú de flujos ofrece estos puntos de inicio (actualizados el 23 nov 2026):
+
+| Flujo | Empieza en |
+|---|---|
+| Inicio · Landing | 01 Landing |
+| A · Cliente crea un pedido | 06 Nuevo pedido (sucursal) |
+| B · Transportista registra un camión | 12 Flota |
+| C · Activar verificación en dos pasos | 10c Verificación (cliente admin) |
+| D · Seguridad de la cuenta | 10b Seguridad (cliente admin) |
+| E · Correo de notificación | 15 Correo de notificación |
+| F · Pedidos de la sucursal sin pedidos | 08b Pedidos de la sucursal · sin pedidos |
+| G · Cliente administra su empresa | CA1 Panel de la empresa |
+| H · Conductor hace su ruta | C1 Mis rutas |
+| I · Transportista administra su empresa | 11 Panel del transportista |
+| J · Administrador de la plataforma | A1 Panel de administración |
+
+El menú lateral de cada rol lleva a las pantallas de ese mismo rol, y el logo lleva a su panel. Se revisó el grafo del prototipo: ningún destino roto y todas las pantallas se alcanzan desde algún flujo, salvo las de error (E0–E5), que son estados sueltos sin un camino natural desde la navegación.
